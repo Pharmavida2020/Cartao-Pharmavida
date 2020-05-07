@@ -109,7 +109,19 @@
 			</div>
 		</a>
 	
+    {{content}}
 
+    {% if menu.footer.items != empty %}
+    <div class="page-section footer-menu pb-0 pt-0 align-center">
+      <div class="container">
+        <ul class="text-center no-bullet">
+          {% for item in menu.footer.items %}
+          {% include 'navigation_footer' with item %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
 
     <!-- Footer -->
     <footer class="page-section footer pb-20 pt-30">
