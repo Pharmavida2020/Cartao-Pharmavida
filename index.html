@@ -111,55 +111,44 @@
 	
   
     
-    {{content}}
-
-    {% if menu.footer.items != empty %}
-    <div class="page-section footer-menu pb-0 pt-0 align-center">
-      <div class="container">
-        <ul class="text-center no-bullet">
-          {% for item in menu.footer.items %}
-          {% include 'navigation_footer' with item %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    {% endif %}
-
-    <!-- Footer -->
-    <footer class="page-section footer pb-20 pt-30">
-      <div class="container">
-
-        <!-- Footer Logo -->
-        <div class="local-scroll wow fadeInUp mb-40 mb-xs-40" data-wow-duration="1.5s">
-          <div class="local-scroll wow fadeInUp mb-40 mb-xs-40" data-wow-duration="1.5s">
-          {% if options.logo_footer != blank %}
-          <a href="#top"><img class="mt-40" src="{{ options.logo_footer }}" width="100" alt="{{store.name}}" /></a>
-          {% elsif store.logo != empty %}
-          <a href="#top"><img class="mt-40" src="{{store.logo}}" width="100" alt="{{store.name}}" /></a>
-          {% endif %}
-        </div>
-        </div>
-        <!-- End Footer Logo -->
-
-        <!-- Social Links -->
-        <div class="footer-social-links mb-40 mb-xs-40">
-          {% if social.facebook_url != blank %}<a href="{{ social.facebook_url }}" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>{% endif %}
-          {% if social.twitter_url != blank %}<a href="{{ social.twitter_url }}" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
-          {% if social.pinterest_url != blank %}<a href="{{ social.pinterest_url }}" title="Pinterest" target="_blank"><i class="fab fa-pinterest"></i></a>{% endif %}
-          {% if social.instagram_url != blank %}<a href="{{ social.instagram_url }}" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>{% endif %}
-          {% if social.whatsapp_url != blank %}<a href="{{ social.whatsapp_url }}&text={% t 'Hello'%} {{store.name}}!" title="Whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>{% endif %}
-          {% if social.youtube_url != blank %}<a href="{{ social.youtube_url }}" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>{% endif %}
-        </div>
-        <!-- End Social Links -->
-
-
-
-        
-        
-        
-      
-
-               
+      }
+        ]
+      }
+    }
+  },
+  "Redes Sociais": {
+    "icon": "share-alt",
+    "options": {
+      "facebook_share_button": {
+        "name": "Botão de Partilha do Facebook",
+        "type": "checkbox",
+        "default": "1"
+      },
+      "twitter_share_button": {
+        "name": "Botão de Partilha do Twitter",
+        "type": "checkbox",
+        "default": "0"
+      },
+      "pinterest_share_button": {
+        "name": "Botão de Partilha do Pinterest",
+        "type": "checkbox",
+        "default": "0"
+      },
+      "whatsapp_button_on_products": {
+        "name": "Botão de Whatsapp nos Produtos em Mobile",
+        "type": "checkbox",
+        "default": "1"
+      }
+    }
+  },
+  "Rodapé": {
+    "icon": "ellipsis-h",
+    "options": {
+      "logo_footer": {
+        "name": "Logótipo de Rodapé",
+        "type": "file",
+        "default": ""
+		
     </ul>
   </div>
   <div class="col-2">
